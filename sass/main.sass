@@ -29,7 +29,11 @@
 		position: absolute
 		top: 20px
 		right: -5px
-		+sized-sprite($icons, arr1)
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 5px 0 5px 5px
+		border-color: transparent transparent transparent #001f3b
 .main-top__comm
 	position: relative
 	float: right
@@ -141,7 +145,11 @@
 		position: absolute
 		top: 13px
 		right: 0
-		+sized-sprite($icons, arr2)
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 4px 0 4px 8px
+		border-color: transparent transparent transparent #ffffff
 .main-author__comm
 	padding: 0 20px
 	@extend %gradr
@@ -312,9 +320,13 @@
 		color: #000
 	i
 		position: absolute
-		bottom: -13px
+		bottom: -12px
 		left: 18px
-		+sized-sprite($icons, arr3)
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 12px 8px 0 8px
+		border-color: #79080e transparent transparent transparent
 .top-opinions__link
 	padding-right: 20px
 	a
@@ -412,8 +424,8 @@
 .news__all
 	position: relative
 	display: inline-block
-	height: 31px
-	line-height: 31px
+	height: 30px
+	line-height: 30px
 	padding: 0 12px
 	background: #1f3264 
 	font-size: 13px
@@ -423,10 +435,15 @@
 		position: absolute
 		top: 0
 		right: -15px
-		+sized-sprite($icons, arr5)
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 15px 0 15px 15px
+		border-color: transparent transparent transparent #1f3364
 //main-experts
 .main-experts	
 	.h2
+		position: relative
 		margin-bottom: 30px
 		text-align: center
 		font-size: 24px
