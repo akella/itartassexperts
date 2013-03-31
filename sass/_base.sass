@@ -1,18 +1,21 @@
 @import "compass/css3"
 //variables
 $brown: #5A3338
-$orange: #f8d7ad
-$gray: #999
-$yellow: #fffdea
-$blue: #2F4F9D
-$red: #EF0021
-$green: #009300
-$hover: #963b47
 // gradients for ie
 $experimental-support-for-svg: true
 // global sprites
 $icons: sprite-map("icons/*.png", $spacing: 10px)
 //extends
+%gradbd
+  +background(linear-gradient(#13417a, #143051)) 
+%gradb
+  +background(linear-gradient(#0259ad, #093d76))  
+%gradr
+  +background(linear-gradient(#8a161e, #62161c))  
+%gradr1
+  +background(linear-gradient(#a20909, #79080d))  
+%boxs
+  box-shadow: rgba(0,0,0,0.45) 9px 9px 21px
 %clr
   &:after
     content: "."
@@ -20,6 +23,10 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
     height: 0
     clear: both
     visibility: hidden
+%hide-text
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
 //mixins
 @mixin rotate($deg: 0) 
   -moz-transform: rotate($deg+ deg)

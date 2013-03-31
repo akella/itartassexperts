@@ -1,2 +1,669 @@
 @import "base"
 //styles for inner pages
+//aside-report
+.aside-report
+	position: relative
+	margin-bottom: 21px
+	padding: 25px 20px 0 20px
+	border-radius: 3px
+	@extend %gradb
+	z-index: 5 
+.aside-report__detail
+	overflow: hidden
+	img
+		float: left
+		margin: 20px 25px 33px 0
+		border-radius: 2px
+		box-shadow: rgba(0,0,0,0.75) 1px 1px 4px
+	p
+		overflow: hidden
+		color: #FFF 
+		span
+			display: block
+			margin-bottom: 5px
+			font-size: 11px
+		a
+			font-size: 24px
+			font-weight: bold
+			line-height: 1.2
+			color: #FFF 
+.aside-report__more
+	height: 50px
+	border-top: 1px solid #366496
+	line-height: 50px
+	a
+		font-size: 11px
+		color: #fff
+		text-transform: uppercase 
+//aside-position
+.aside-position
+	position: relative
+	margin-bottom: 28px
+	padding: 0 20px 30px 20px
+	background: #FFF 
+	border-radius: 3px
+	z-index: 5 
+.aside-position__item
+	padding-top: 18px
+.aside-position__detail
+	padding: 13px 12px 20px 12px
+	box-shadow: rgba(0,0,0,0.25) 0 0 6px
+	img
+		float: left
+		margin-right: 18px 
+	p
+		overflow: hidden
+		a
+			font-size: 16px
+			color: #7c090d
+			font-weight: bold
+			line-height: 1.2
+		span
+			display: block
+			margin-bottom: 7px
+			a
+				font-family: Georgia, Arial, Tahoma, sans-serif 
+				font-weight: normal
+				font-size: 13px
+				color: #000
+.aside-position__desc
+	position: relative
+	padding: 17px 12px 
+	@extend %gradb
+	border-radius: 3px
+	font-size: 13px
+	color: #FFF
+	line-height: 1.1
+	font-weight: bold 
+	i
+		position: absolute
+		top: 0
+		left: 35px
+		+sized-sprite($icons, arr4)
+//theme
+.theme-list
+	background: #eaeaea 
+	.theme
+		margin-bottom: 1px
+	.theme__desc
+		p
+			margin-bottom: 14px
+.theme
+	position: relative
+	padding: 15px 20px
+	margin: 0 -1px
+	border-radius: 3px
+	@extend %gradb
+	overflow: hidden
+	z-index: 5 
+.theme_red, .theme_content	
+	.theme__comm
+		a
+			color: #FFF
+		i
+			+sized-sprite($icons, comm6)	
+.theme_red
+	@extend %gradr1
+	.theme__comm
+		border-color: #b85858
+	.theme__desc
+		.h1
+			padding: 5px 0
+			font-size: 36px
+		p
+			color: #FFF
+.theme_content	
+	.theme__desc
+		padding-right: 20px
+		overflow: hidden
+		.h1
+			padding: 10px 0 5px 0
+	.theme__comm
+		border-color: #5085b9
+.theme__desc
+	.h1
+		padding: 5px 0 10px 0
+		line-height: 1
+	a
+		color: #FFF 
+	p, span
+		font-size: 12px
+		color: #a2b7d8
+	p 
+		line-height: 1.3
+.theme__pic
+	float: left
+	margin: 7px 40px 7px 0
+	img
+		display: block
+		border-radius: 2px
+		box-shadow: rgba(0, 0, 0, 0.75) 1px 1px 4px
+.theme__read
+	position: absolute
+	right: 20px
+	bottom: 20px
+	font-size: 14px
+	color: #FFF 
+//pagination
+.pagination
+	margin: -1px 0 50px 0
+	padding: 28px 0 34px
+	background: #fdfdfd
+	border-radius: 0 0 3px 3px 
+	text-align: center
+	font-size: 0
+	a
+		display: inline-block 
+		padding: 0 7px
+		vertical-align: middle
+		font-size: 12px
+		color: #000  
+		font-weight: bold
+		&.active
+			color: #676767 
+	.pagination__prev, .pagination__next
+		padding: 0
+		&.disabled
+			cursor: default
+	.pagination__prev
+		margin-right: 14px
+		+sized-sprite($icons, btn-prev)
+		&.disabled
+			+sized-sprite($icons, btn-prev-dis)
+	.pagination__next
+		margin-left: 14px
+		+sized-sprite($icons, btn-next)
+		&.disabled
+			+sized-sprite($icons, btn-next-dis)
+.pagination_mod
+	margin-bottom: 28px
+	background: #FFF 
+//actual
+.actual
+	margin-bottom: 28px
+	padding: 20px
+	background: #ececec 
+	border-radius: 0 0 3px 3px
+	overflow: hidden
+	li
+		float: left
+		width: 149px
+		margin-left: 13px
+		&:first-child
+			margin: 0
+	img
+		display: block
+		margin-bottom: 10px
+	a
+		font-size: 14px
+		color: #04509c
+		font-weight: bold
+		line-height: 1.2 
+.actual__comm
+	margin-top: 7px
+	a
+		position: relative
+		padding-left: 28px
+		color: #910d0d 
+	i
+		position: absolute
+		top: 0
+		left: 0
+		+sized-sprite($icons, comm4)
+//story
+.story
+	padding: 16px 20px
+	background: #fdfdfd 
+.story__item
+	margin-bottom: 30px
+.story__item_mod
+	padding-top: 30px
+	border-top: 1px solid #b2b2b2
+.story__pic
+	margin-bottom: 12px
+	img
+		display: block
+.story__detail
+	margin-bottom: 20px
+	overflow: hidden
+.story__comm, .theme__comm
+	float: right
+	height: 73px
+	padding: 0 22px 0 20px
+	border-left: 1px solid #b2b2b2
+	line-height: 73px 
+	a
+		position: relative
+		padding-left: 40px
+		font-family: 'Open Sans Condensed', Arial, Tahoma, sans-serif
+		font-size: 22px
+		color: #a30909 
+	i
+		position: absolute
+		top: 6px
+		left: 0
+		+sized-sprite($icons, comm5)
+.story__info
+	margin-right: 15px
+	overflow: hidden
+	span
+		font-size: 12px
+		color: #413f3f 
+	.h1
+		margin-top: 3px
+		font-size: 30px
+		a
+			color: #000 
+.story__desc
+	margin-bottom: 20px
+	p
+		font-size: 14px
+		color: #3f3d3d
+		line-height: 1.5
+	a
+		color: #0259ad 
+.story__opinions
+	strong
+		display: block
+		margin-bottom: 15px 
+		font-size: 12px
+		text-transform: uppercase
+	ul
+		overflow: hidden
+	li
+		float: left
+		margin-right: 3px
+		line-height: 0.8
+	.story__user
+		width: 106px
+		margin: 0 0 10px 0
+		img
+			display: block
+		a
+			float: right
+			width: 75px
+			padding-top: 1px
+			line-height: 1.2
+			&:first-child
+				float: left
+				width: 26px
+				padding: 0
+	a
+		font-size: 10px
+		font-weight: bold
+		color: #a30909 
+//content
+.content
+	padding: 25px 40px
+	background: #FFF 
+	p
+		margin-bottom: 20px
+		font-size: 14px
+		color: #3f3d3d
+		line-height: 1.5
+	a				
+		color: #0259ad 
+.content_mod
+	padding: 20px
+	img
+		float: left
+		margin: 0 10px 10px 0
+//share
+.share	
+	margin-bottom: 28px
+	padding: 17px 0 14px 40px
+	background: #ececec 
+	box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px -5px inset
+	border-radius: 0 0 3px 3px
+	ul
+		height: 35px
+		overflow: hidden
+	li
+		float: left
+		height: 35px
+		border-left: 1px solid #bdbdbd 
+		&:first-child
+			border: none
+.share_mod
+	background: #FFF
+	box-shadow: none 
+.share__all
+	padding: 3px 27px 0 0
+.share__vk
+	padding: 4px 25px 0 25px
+.share__gg, .share__tw
+	padding: 6px 25px 0 25px
+//aside-agenda
+.aside-agenda
+	position: relative
+	padding: 20px 20px 10px 20px
+	border-radius: 3px
+	background: #FFF 
+	z-index: 5 
+	li
+		margin-bottom: 20px
+		img
+			display: block
+			margin-bottom: 12px
+		span
+			display: block
+			margin-bottom: 5px
+			font-size: 11px
+			color: #5f5e5e 
+		a
+			font-size: 14px
+			color: #0b4784 
+			line-height: 1.1 
+//aside-expert
+.aside-expert
+	position: relative
+	padding: 25px 20px 20px 20px
+	border-radius: 3px
+	background: #FFF 
+	text-align: center
+	z-index: 5
+	a
+		font-size: 21px
+		color: #870c0c  
+		font-weight: bold
+	p
+		margin-top: 15px
+		font-size: 12px
+		color: #282828 
+		line-height: 1.2
+.aside-expert__pic
+	margin-bottom: 15px
+//expert
+.expert
+	padding: 18px 20px 22px 20px
+	background: #ffffff 
+	overflow: hidden
+	img
+		float: left
+		margin: 0 15px 0 0
+	p
+		font-size: 14px
+		color: #3f3d3d
+		line-height: 1.4
+	.expert__desc
+		margin-bottom: 20px
+		font-weight: bold
+.expert__title
+	height: 9px
+	margin: 25px 0 30px 0
+	border-bottom: 1px solid #b2b2b2
+	text-align: center
+	strong
+		display: inline-block
+		padding: 0 60px
+		background: #fff 
+		font-size: 18px
+.expert__opinions
+	margin: 0 -7px
+	font-size: 0
+	li
+		display: inline-block
+		width: 203px 	
+		padding: 0 7px
+		margin-bottom: 25px
+		vertical-align: top
+	p
+		position: relative
+		height: 107px
+		margin-bottom: 18px		
+		padding: 6px 6px 7px 6px
+		+background(linear-gradient(#555, #3e3e3e))
+		line-height: 107px
+	strong		
+		display: block	
+		height: 107px
+		padding: 0 9px
+		background: #FFF 	
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 15px
+		line-height: 1.2
+	i
+		position: absolute
+		bottom: -13px
+		left: 18px
+		+sized-sprite($icons, arr7)
+	a
+		display: block
+		padding-right: 20px
+		font-size: 11px
+		color: #04509c 
+		line-height: 1.2
+//experts
+.experts
+	padding: 20px 
+	background: #FFF 
+.experts__sort
+	margin-bottom: 35px
+	padding-bottom: 10px
+	border-bottom: 1px solid #a1a1a1 
+	overflow: hidden
+	font-size: 14px
+	text-align: right
+	font-size: 0
+	a
+		display: inline-block
+		margin-left: 7px
+		font-weight: bold
+		font-size: 14px
+		color: #0d509a 
+		&:first-child
+			float: left
+			margin: 0
+		&.active
+			color: #000
+.experts__list
+	font-size: 0
+	li
+		display: inline-block
+		width: 130px
+		margin: 0 29px 25px 0
+		vertical-align: top
+	img
+		display: block
+		margin-bottom: 13px
+	a
+		font-size: 14px
+		font-weight: bold
+		color: #000 
+	p
+		margin-top: 7px
+		font-size: 11px
+		line-height: 1.2
+		color: #949494 
+//post
+.post
+	padding: 0 20px
+	background: #FFF 
+.post__item
+	padding: 30px 0 15px 0
+	border-top: 1px solid #d4d3d3
+	overflow: hidden
+	p
+		font-size: 16px
+		color: #000
+.post__item_mod
+	padding: 20px 0
+.post__detail
+	overflow: hidden
+.post__pic
+	float: left
+	margin-right: 20px
+	img
+		display: block
+.post__meta
+	margin-bottom: 3px
+	overflow: hidden
+	a
+		float: left
+		font-size: 21px
+		font-weight: bold
+		color: #000
+	strong
+		float: right
+		margin-top: 3px
+		font-weight: normal
+		font-size: 12px
+		color: #838383
+	span
+		color: #000   
+.post__work
+	margin-bottom: 15px
+	padding-right: 200px
+	font-style: italic
+	font-size: 12px
+	line-height: 1.1
+	color: #595959 
+.post__desc
+	p, blockquote
+		margin-bottom: 20px
+		font-size: 16px
+		line-height: 1.5
+	blockquote
+		color: #a30909
+.post__more
+	a
+		font-size: 16px
+		font-weight: bold
+		color: #0b437d 
+.post__bottom
+	position: relative
+	padding: 55px 0 55px 150px
+	overflow: hidden
+.post__rating
+	float: left
+	background: #e3e3e3 
+	border-radius: 3px
+	overflow: hidden
+	button, strong
+		float: left
+	strong
+		height: 27px
+		padding: 0 15px
+		background: #ececec 
+		box-shadow: rgba(0,0,0,0.3) 0 0 7px
+		line-height: 27px
+		font-family: 'Open Sans Condensed', Arial, Tahoma, sans-serif
+		font-size: 21px
+		color: #3e3c3c 
+.post__minus
+	+sized-sprite($icons, minus)
+.post__plus
+	+sized-sprite($icons, plus)
+.post__comm
+	float: right
+	height: 27px
+	line-height: 27px
+	button, span
+		float: left
+	button
+		height: 27px
+		line-height: 27px
+		background: none 
+		font-size: 16px
+		font-weight: bold
+	span
+		position: relative
+		padding-left: 37px
+		margin-left: 17px
+		border-left: 1px solid #8b8a8a
+	i
+		position: absolute
+		top: 5px
+		left: 10px
+		+sized-sprite($icons, comm4)
+//comm
+.comm
+	background: #e3e3e3 
+.comm__list
+	position: relative
+	padding: 40px 20px	
+	box-shadow: rgba(0,0,0,0.5) 0 9px 20px -10px inset 
+	z-index: 5 
+	li
+		margin-top: 70px
+		overflow: hidden
+		&:first-child
+			margin: 0
+.comm__arr
+	position: absolute
+	top: -20px
+	right: 180px
+	+sized-sprite($icons, arr8)
+.comm__pic
+	float: left
+	margin-right: 20px
+	img
+		display: block
+.comm__detail
+	overflow: hidden	
+.comm__name
+	margin-bottom: 15px
+	overflow: hidden
+	a
+		float: left
+		font-size: 14px
+		font-weight: bold
+		color: #000 
+	span
+		float: right
+		font-size: 12px
+		color: #959595 
+.comm__txt
+	font-size: 14px
+	p
+		margin-bottom: 20px		
+		color: #3c3b3b 
+		line-height: 1.5
+	a
+		font-weight: bold 
+		color: #9d1010 
+//add-comm
+.add-comm
+	padding: 25px 20px 95px 20px
+	border-top: 1px solid #b1b0b0
+	overflow: hidden
+.add-comm__pic
+	float: left
+	width: 130px
+	margin-right: 20px
+	text-align: center
+	img
+		margin: 18px 0 7px 0
+	a
+		font-size: 14px
+		font-weight: bold
+		color: #000
+.add-comm__form
+	overflow: hidden
+	label
+		display: block
+		margin-bottom: 8px
+		font-size: 10px
+		text-transform: uppercase
+.add-comm__theme, .add-comm__txt
+	width: 475px
+	margin-bottom: 20px		
+	border: 1px solid #adacac
+	font-family: Arial, Tahoma, sans-serif 
+.add-comm__theme	
+	height: 24px
+	padding: 0 5px
+.add-comm__txt
+	height: 180px
+	padding: 5px
+.add-comm__btn
+	height: 28px
+	padding: 0 35px
+	+background(linear-gradient(#d42828 0%, #bc2b2b 50%, #b31515 51%, #980e0e 100%))	   
+	border-radius: 2px
+	font-size: 10px
+	color: #FFF
+	text-transform: uppercase 
+	cursor: pointer

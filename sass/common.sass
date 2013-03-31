@@ -6,7 +6,8 @@
 html, body 
 	height: 100%
 body
-	font-family: 'Open Sans', Arial, Tahoma, sans-serif
+	background: url(../img/body-bg.jpg)
+	font-family: Arial, Tahoma, sans-serif 
 	font-weight: 400
 	font-size: 14px
 	color: #231F20 
@@ -17,12 +18,7 @@ body
 a img, fieldset 
 	border: none
 a
-	color: #37559a
 	text-decoration: none
-	&:hover
-		color: $hover
-p
-	line-height: 1.2
 li 
 	list-style: none
 textarea, button, select, input
@@ -34,16 +30,249 @@ button
 table 
 	border-spacing: 0
 	border-collapse: collapse
-// common styles
+//common styles
 .wrap
-	width: 960px
-	min-height: 100%
-	height: auto !important
-	height: 100%
-	margin: 0 auto -140px
-.container
-	width: 960px
+	width: 990px
 	margin: 0 auto
-.push
-	height: 140px
-	clear: both
+.wrap_main
+	width: 1270px
+.h1
+	font-size: 30px
+	color: #fff
+.h2
+	font-size: 21px
+	color: #000
+	text-transform: uppercase
+.title
+	position: relative
+	height: 50px
+	padding-left: 20px 
+	background: #ececec
+	border-radius: 3px 3px 0 0
+	box-shadow: rgba(0,0,0,0.3) 0 -5px 20px -5px inset
+	line-height: 50px	
+.title_mod, .title_mod-1, .title_mod-2
+	padding-bottom: 2px
+	margin-bottom: -2px 
+.title_mod-2
+	height: auto
+	padding: 18px 20px 14px 20px
+	line-height: 1
+	.h2
+		margin-bottom: 5px
+	a
+		font-size: 18px
+		font-weight: bold
+		color: #0a437e 		
+.title_mod-1
+	box-shadow: none
+.nav-btns
+	position: absolute
+	top: 17px
+	right: 20px
+	button
+		float: left
+		&:first-child
+			margin-right: 26px
+		&.disabled
+			cursor: default
+.nav-btns__prev
+	+sized-sprite($icons, btn-prev)
+	&.disabled
+		+sized-sprite($icons, btn-prev-dis)
+.nav-btns__next
+	+sized-sprite($icons, btn-next)
+	&.disabled
+		+sized-sprite($icons, btn-next-dis)
+.block
+	position: relative
+	@extend %boxs
+	border-radius: 3px
+	z-index: 5 
+.block-all
+	padding-top: 3px
+	margin-top: -3px
+	height: 30px
+	padding: 0 20px
+	line-height: 30px
+	margin-bottom: 20px 
+	@extend %gradb
+	border-radius: 0 0 3px 3px
+	a
+		position: relative
+		padding-right: 10px
+		font-size: 10px
+		font-weight: bold
+		color: #FFF
+		text-transform: uppercase 
+	i
+		position: absolute
+		top: 3px
+		right: 0
+		+sized-sprite($icons, arr6)
+//header
+.header
+	position: relative
+	height: 124px
+	background: url(../img/header-bg.png) no-repeat 98% 0
+	.search-form
+		margin-right: 20px
+		padding: 3px 0 7px 0
+		border-right: 1px solid #525252
+.header__logo
+	position: relative
+	float: left
+	width: 147px
+	height: 94px
+	margin: 17px 28px 0 0
+	border-right: 1px solid #525252
+	i
+		display: block
+		margin: 3px 0 15px 11px
+		+sized-sprite($icons, logo)
+	span
+		font-family: 'Open Sans Condensed', Arial, Tahoma, sans-serif
+		font-size: 21px
+		text-transform: uppercase
+		color: #fff
+		text-shadow: rgba(0,0,0,0.75) 0 0 3px	
+	strong
+		@extend %hide-text
+.header__block
+	float: left
+	width: 562px
+	margin-top: 28px
+.header__top
+	margin-bottom: 15px
+	padding-bottom: 6px
+	border-bottom: 1px solid #525252 
+	overflow: hidden
+.header__login
+	float: left
+	margin-top: 10px
+	font-family: Tahoma, Arial, sans-serif
+	font-size: 10px
+	text-transform: uppercase
+	a, span
+		float: left
+	a
+		color: #fff
+	span
+		padding: 0 9px
+		color: #808080
+.header__link
+	position: absolute
+	top: 50px
+	right: 0
+	text-align: center
+	font-family: 'Courier New', Arial, Tahoma, sans-serif
+	font-size: 21px
+	font-weight: bold
+	line-height: 0.9
+	color: #fff
+	text-shadow: rgba(0,0,0,0.75) 0 -2px 2px
+	text-transform: uppercase 
+.search-form
+	float: left	
+	input, button
+		float: left
+	input
+		width: 270px
+		height: 23px
+		padding: 0 10px
+		background: #FFF
+		border-radius: 2px
+		font-family: Tahoma, Arial, sans-serif
+		font-size: 8px  
+	button
+		padding: 4px 14px 2px 13px
+		background: none 
+		i
+			display: block
+			+sized-sprite($icons, search)
+.nav
+	ul
+		overflow: hidden
+	li
+		float: left
+		margin-left: 23px
+		&:first-child
+			margin: 0
+	a
+		font-family: 'Open Sans Condensed', Arial, Tahoma, sans-serif
+		font-size: 16px
+		color: #c0c0c0
+		text-transform: uppercase 
+//footer
+.footer
+	background: #f3f3f3 
+	.wrap
+		position: relative		
+		width: 900px
+		height: 238px
+		padding: 27px 0 0 90px
+	.search-form
+		input
+			border: 1px solid #d0d0d0	
+		button
+			i
+				+sized-sprite($icons, search1)
+	.nav
+		margin-bottom: 40px
+		li
+			margin-left: 35px
+			&:first-child
+				margin: 0
+		a
+			color: #6e6d6d
+.footer_main
+	.wrap
+		width: 1040px		
+		padding: 27px 0 0 230px
+		.footer__logo
+			left: 20px
+.footer__logo
+	position: absolute
+	top: 20px
+	left: -120px
+	i
+		display: block
+		+sized-sprite($icons, logo1)
+	strong
+		position: absolute
+		top: 50px
+		left: 0
+		width: 100%
+		text-align: center
+	span
+		position: relative
+		top: -5px
+		display: inline-block
+		padding: 3px
+		background: #990d0f 
+		text-transform: uppercase
+		font-size: 9px
+		color: #fff
+		&:first-child			
+			top: 0px
+.footer__top
+	margin-bottom: 40px
+	overflow: hidden
+	.h2
+		float: left
+		height: 25px
+		margin-right: 25px
+		line-height: 25px
+		font-family: 'Open Sans Condensed', Arial, Tahoma, sans-serif
+		font-size: 21px
+		color: #505050   
+.copyright	
+	font-size: 11px
+	color: #a3a3a3
+	strong
+		text-transform: uppercase
+	p
+		margin-top: 15px 		
+		line-height: 1.3
+
+	

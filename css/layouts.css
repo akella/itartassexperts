@@ -1,0 +1,8 @@
+.l-cols:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.l-col-1 { float: left; width: 677px; }
+
+.l-col-2 { float: right; width: 295px; }
+
+.l-cols_main .l-col-1 { width: 860px; }
+.l-cols_main .l-col-2 { width: 395px; }
