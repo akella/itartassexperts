@@ -258,8 +258,11 @@
 	background: #ececec
 	border-radius: 0 0 3px 3px
 .top-opinions_aside
-	margin: 0
+	margin: 0 0 20px 0
 	padding: 10px 20px 22px 20px
+	.block__content
+		margin: 0
+		background: #ECECEC 
 	.top-opinions__item
 		float: none
 		width: 255px
@@ -449,9 +452,11 @@
 		font-size: 24px
 		color: #FFF
 .main-experts__list
-	margin-bottom: 40px
-	font-size: 0
-	text-align: center
+	position: relative
+	ul
+		margin-bottom: 40px
+		font-size: 0
+		text-align: center
 	li
 		position: relative
 		display: inline-block
@@ -459,8 +464,29 @@
 		width: 184px
 		margin: 0 8px
 		box-shadow: rgba(0,0,0,0.45) -5px 0 10px
+	button
+		display: block
+		position: absolute
+		top: 0
+		width: 184px
+		height: 300px
+		background: rgba(0,0,0,0.6) 
+		z-index: 5 
+		i
+			position: absolute
+			top: 118px			
+			left: 50%
+			margin-left: -8px
+.main-experts__btn-prev
+	left: 50%
+	margin-left: -792px
 	i
-		display: none
+		+sized-sprite($icons, btn-prev1)
+.main-experts__btn-next
+	right: 50%
+	margin-right: -792px
+	i	
+		+sized-sprite($icons, btn-next1)
 .main-experts__item
 	height: 300px	
 	background: #FFF 	
@@ -485,23 +511,6 @@
 		display: inline-block
 		line-height: 1.2
 		vertical-align: middle
-.main-experts__prev, .main-experts__next
-	cursor: pointer
-	.main-experts__item
-		opacity: 0.2
-		filter: alpha(opacity=20)
-	i
-		display: block
-		position: absolute
-		top: 118px
-		left: 50%
-		margin-left: -8px
-.main-experts__prev
-	i
-		+sized-sprite($icons, btn-prev1)
-.main-experts__next
-	i
-		+sized-sprite($icons, btn-next1)
 //main-events
 .main-events
 	padding-bottom: 125px

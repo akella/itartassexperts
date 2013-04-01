@@ -9,6 +9,7 @@
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
 					<button type="submit"><i></i></button>
 				</form>
 				<div class="header__login">
-					<a href="#">вход</a>
+					<a class="js-enter-open" href="#">вход</a>
 					<span>|</span>
 					<a href="#">регистрация</a>
 				</div>
@@ -215,20 +216,42 @@
 		</section>
 		<aside class="l-col-2">
 			<!-- BEGIN .block -->
-			<div class="block">
+			<div class="block block_mod">
 				<div class="title title_mod">
 					<h2 class="h2">наши эксперты</h2>
 					<div class="nav-btns">
-						<button class="nav-btns__prev disabled"></button>
-						<button class="nav-btns__next"></button>
+						<button class="nav-btns__prev js-sl-prev"></button>
+						<button class="nav-btns__next js-sl-next"></button>
 					</div>
 				</div>
-				<div class="aside-expert">
-					<div class="aside-expert__pic">
-						<a href="#"><img src="img/pic18.jpg" alt=""></a>
-					</div>					
-					<a href="#">Глеб Павловский</a>
-					<p>Президент Фонда эффективной политики, член Общественной палаты РФ</p>
+				<div class="block__content js-sl">
+					<div class="aside-expert">
+						<div class="aside-expert__pic">
+							<a href="#"><img src="img/pic18.jpg" width="184" height="158" alt=""></a>
+						</div>		
+						<div class="aside-expert__info">
+							<a href="#">Глеб Павловский</a>
+							<p>Президент Фонда эффективной политики, член Общественной палаты РФ</p>
+						</div>
+					</div>
+					<div class="aside-expert">
+						<div class="aside-expert__pic">
+							<a href="#"><img src="img/pic18.jpg" width="184" height="158" alt=""></a>
+						</div>		
+						<div class="aside-expert__info">
+							<a href="#">Глеб Павловский</a>
+							<p>Президент Фонда эффективной политики, член Общественной палаты РФ</p>
+						</div>
+					</div>
+					<div class="aside-expert">
+						<div class="aside-expert__pic">
+							<a href="#"><img src="img/pic18.jpg" width="184" height="158" alt=""></a>
+						</div>		
+						<div class="aside-expert__info">
+							<a href="#">Глеб Павловский</a>
+							<p>Президент Фонда эффективной политики, член Общественной палаты РФ</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="block-all">
@@ -243,23 +266,102 @@
 				</div>
 				<div class="top-opinions top-opinions_aside">
 					<div class="nav-btns">
-						<button class="nav-btns__prev disabled"></button>
-						<strong>3 место</strong>
-						<button class="nav-btns__next"></button>
+						<div class="js-sl-count">
+							<button class="nav-btns__prev js-sl-prev"></button>
+							<strong><span>1</span> место</strong>
+							<button class="nav-btns__next js-sl-next"></button>
+						</div>						
 					</div>
-					<div class="top-opinions__item">
-						<div class="top-opinions__pic">
-							<a href="#"><img src="img/pic19.jpg" alt=""></a>
+					<div class="block__content js-sl">
+						<div class="top-opinions__item">
+							<div class="top-opinions__pic">
+								<a href="#"><img src="img/pic19.jpg" width="255" height="125" alt=""></a>
+							</div>
+							<div class="top-opinions__info">
+								<a href="#">
+									<span>Kevin Shults</span>
+									<p>«Отличным поводом для судебного разбирательства послужила фраза»</p>
+									<i></i>
+								</a>
+							</div>
+							<div class="top-opinions__link">
+								<a href="#">Пресс-секретарь Святого Престола подтвердил факт небольшой операции на сердце у Папы Римского Бенедикта XVI</a>
+							</div>
 						</div>
-						<div class="top-opinions__info">
-							<a href="#">
-								<span>Kevin Shults</span>
-								<p>«Отличным поводом для судебного разбирательства послужила фраза»</p>
-								<i></i>
-							</a>
+						<div class="top-opinions__item">
+							<div class="top-opinions__pic">
+								<a href="#"><img src="img/pic19.jpg" width="255" height="125" alt=""></a>
+							</div>
+							<div class="top-opinions__info">
+								<a href="#">
+									<span>Kevin Shults</span>
+									<p>«Отличным поводом для судебного разбирательства послужила фраза»</p>
+									<i></i>
+								</a>
+							</div>
+							<div class="top-opinions__link">
+								<a href="#">Пресс-секретарь Святого Престола подтвердил факт небольшой операции на сердце у Папы Римского Бенедикта XVI</a>
+							</div>
 						</div>
-						<div class="top-opinions__link">
-							<a href="#">Пресс-секретарь Святого Престола подтвердил факт небольшой операции на сердце у Папы Римского Бенедикта XVI</a>
+						<div class="top-opinions__item">
+							<div class="top-opinions__pic">
+								<a href="#"><img src="img/pic19.jpg" width="255" height="125" alt=""></a>
+							</div>
+							<div class="top-opinions__info">
+								<a href="#">
+									<span>Kevin Shults</span>
+									<p>«Отличным поводом для судебного разбирательства послужила фраза»</p>
+									<i></i>
+								</a>
+							</div>
+							<div class="top-opinions__link">
+								<a href="#">Пресс-секретарь Святого Престола подтвердил факт небольшой операции на сердце у Папы Римского Бенедикта XVI</a>
+							</div>
+						</div>
+						<div class="top-opinions__item">
+							<div class="top-opinions__pic">
+								<a href="#"><img src="img/pic19.jpg" width="255" height="125" alt=""></a>
+							</div>
+							<div class="top-opinions__info">
+								<a href="#">
+									<span>Kevin Shults</span>
+									<p>«Отличным поводом для судебного разбирательства послужила фраза»</p>
+									<i></i>
+								</a>
+							</div>
+							<div class="top-opinions__link">
+								<a href="#">Пресс-секретарь Святого Престола подтвердил факт небольшой операции на сердце у Папы Римского Бенедикта XVI</a>
+							</div>
+						</div>
+						<div class="top-opinions__item">
+							<div class="top-opinions__pic">
+								<a href="#"><img src="img/pic19.jpg" width="255" height="125" alt=""></a>
+							</div>
+							<div class="top-opinions__info">
+								<a href="#">
+									<span>Kevin Shults</span>
+									<p>«Отличным поводом для судебного разбирательства послужила фраза»</p>
+									<i></i>
+								</a>
+							</div>
+							<div class="top-opinions__link">
+								<a href="#">Пресс-секретарь Святого Престола подтвердил факт небольшой операции на сердце у Папы Римского Бенедикта XVI</a>
+							</div>
+						</div>
+						<div class="top-opinions__item">
+							<div class="top-opinions__pic">
+								<a href="#"><img src="img/pic19.jpg" width="255" height="125" alt=""></a>
+							</div>
+							<div class="top-opinions__info">
+								<a href="#">
+									<span>Kevin Shults</span>
+									<p>«Отличным поводом для судебного разбирательства послужила фраза»</p>
+									<i></i>
+								</a>
+							</div>
+							<div class="top-opinions__link">
+								<a href="#">Пресс-секретарь Святого Престола подтвердил факт небольшой операции на сердце у Папы Римского Бенедикта XVI</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -308,5 +410,91 @@
 	</div>
 </footer>
 <!-- END .footer -->
+<!-- BEGIN .popup -->
+<div class="popup-bg"></div>
+<form class="popup popup_enter" action="">
+	<div class="popup__title">Вход на сайты итар-тасс<button class="js-enter-close"></button></div>
+	<div class="popup__content">
+		<div class="enter">
+			<ul class="enter__fields">
+				<li>
+					<label for="enter-email">E-mail</label>
+					<input id="enter-email" type="text">
+				</li>
+				<li>
+					<label for="enter-login">Login</label>
+					<input id="enter-login" type="text">
+					<button></button>
+				</li>
+			</ul>
+			<div class="enter__info">
+				<div class="enter__links">
+					<a class="enter__lost-pass" href="#">Забыли пароль?</a>
+					<span>Нет логина?</span>
+					<a class="enter__reg" href="#">Зарегистрируйтесь</a>
+				</div>
+				<div class="enter__bottom">
+					<input class="enter__btn" type="submit" value="войти">
+					<label class="enter__remember"><input type="checkbox"><i></i>Запомнить меня</label>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="enter__social">
+		<span>Регистрация с помощью соцсетей</span>
+		<ul>
+			<li><a class="enter__fb" href="#"></a></li>
+			<li><a class="enter__vk" href="#"></a></li>
+			<li><a class="enter__tw" href="#"></a></li>
+			<li><a class="enter__ok" href="#"></a></li>
+			<li><a class="enter__ml" href="#"></a></li>
+		</ul>
+		</p>
+	</div>
+</form>
+<!-- END .popup -->
+<!-- BEGIN .popup -->
+<div class="popup-bg"></div>
+<form class="popup popup_enter" action="">
+	<div class="popup__title">Вход на сайты итар-тасс<button class="js-enter-close"></button></div>
+	<div class="popup__content">
+		<div class="enter">
+			<ul class="enter__fields">
+				<li>
+					<label for="enter-email">E-mail</label>
+					<input id="enter-email" type="text">
+				</li>
+				<li>
+					<label for="enter-login">Login</label>
+					<input id="enter-login" type="text">
+					<button></button>
+				</li>
+			</ul>
+			<div class="enter__info">
+				<div class="enter__links">
+					<a class="enter__lost-pass" href="#">Забыли пароль?</a>
+					<span>Нет логина?</span>
+					<a class="enter__reg" href="#">Зарегистрируйтесь</a>
+				</div>
+				<div class="enter__bottom">
+					<input class="enter__btn" type="submit" value="войти">
+					<label class="enter__remember"><input type="checkbox"><i></i>Запомнить меня</label>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="enter__social">
+		<span>Регистрация с помощью соцсетей</span>
+		<ul>
+			<li><a class="enter__fb" href="#"></a></li>
+			<li><a class="enter__vk" href="#"></a></li>
+			<li><a class="enter__tw" href="#"></a></li>
+			<li><a class="enter__ok" href="#"></a></li>
+			<li><a class="enter__ml" href="#"></a></li>
+		</ul>
+		</p>
+	</div>
+</form>
+<!-- END .popup -->
 </body>
 </html>

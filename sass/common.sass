@@ -87,15 +87,22 @@ table
 .block
 	position: relative
 	@extend %boxs
-	border-radius: 3px
+	border-radius: 3px	 
 	z-index: 5 
+.block__content
+	position: relative
+	margin-bottom: 20px
+	border-radius: 3px
+	background: #FFF
+	z-index: 5 
+.block__content_report
+	@extend %gradb
 .block-all
 	padding-top: 3px
-	margin-top: -3px
+	margin: -23px 0 20px 0
 	height: 30px
 	padding: 0 20px
 	line-height: 30px
-	margin-bottom: 20px 
 	@extend %gradb
 	border-radius: 0 0 3px 3px
 	a
@@ -287,13 +294,16 @@ table
 	height: 100%
 	background: rgba(60,60,60,0.75) 
 	z-index: 50 
+	display: none
 .popup
 	position: fixed
 	top: 250px
-	left: 50%
+	left: 50%	
+	z-index: 100 
+	display: none
+.popup_enter
 	margin-left: -250px
 	width: 500px
-	z-index: 100 
 .popup__title
 	position: relative
 	height: 47px

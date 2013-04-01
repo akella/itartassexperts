@@ -9,6 +9,7 @@
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
 					<button type="submit"><i></i></button>
 				</form>
 				<div class="header__login">
-					<a href="#">вход</a>
+					<a class="js-enter-open" href="#">вход</a>
 					<span>|</span>
 					<a href="#">регистрация</a>
 				</div>
@@ -243,20 +244,46 @@
 				<div class="title title_mod-1">
 					<h2 class="h2">доклад</h2>
 					<div class="nav-btns">
-						<button class="nav-btns__prev disabled"></button>
-						<button class="nav-btns__next"></button>
+						<button class="nav-btns__prev js-sl-prev"></button>
+						<button class="nav-btns__next js-sl-next"></button>
 					</div>
 				</div>
-				<div class="aside-report">
-					<div class="aside-report__detail">
-						<a href="#"><img src="img/pic6.jpg" alt=""></a>
-						<p>
-							<span>12.03. 2013</span>
-							<a href="#">Роль Владимира Владимировича Путина в развитии России за период 2000-2012 г.г.</a>
-						</p>
+				<div class="block__content block__content_report js-sl">
+					<div class="aside-report">
+						<div class="aside-report__detail">
+							<a href="#"><img src="img/pic6.jpg" width="100" height="133" alt=""></a>
+							<p>
+								<span>12.03. 2013</span>
+								<a href="#">Роль Владимира Владимировича Путина в развитии России за период 2000-2012 г.г.</a>
+							</p>
+						</div>
+						<div class="aside-report__more">
+							<a href="#">Читать доклад полностью</a>
+						</div>
 					</div>
-					<div class="aside-report__more">
-						<a href="#">Читать доклад полностью</a>
+					<div class="aside-report">
+						<div class="aside-report__detail">
+							<a href="#"><img src="img/pic6.jpg" width="100" height="133" alt=""></a>
+							<p>
+								<span>12.03. 2013</span>
+								<a href="#">Роль Владимира Владимировича Путина в развитии России за период 2000-2012 г.г.</a>
+							</p>
+						</div>
+						<div class="aside-report__more">
+							<a href="#">Читать доклад полностью</a>
+						</div>
+					</div>
+					<div class="aside-report">
+						<div class="aside-report__detail">
+							<a href="#"><img src="img/pic6.jpg" width="100" height="133" alt=""></a>
+							<p>
+								<span>12.03. 2013</span>
+								<a href="#">Роль Владимира Владимировича Путина в развитии России за период 2000-2012 г.г.</a>
+							</p>
+						</div>
+						<div class="aside-report__more">
+							<a href="#">Читать доклад полностью</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -266,37 +293,95 @@
 				<div class="title title_mod">
 					<h2 class="h2">Позиция</h2>
 					<div class="nav-btns">
-						<button class="nav-btns__prev disabled"></button>
-						<button class="nav-btns__next"></button>
+						<button class="nav-btns__prev js-sl-prev"></button>
+						<button class="nav-btns__next js-sl-next"></button>
 					</div>
 				</div>
-				<div class="aside-position">
-					<ul class="aside-position__list">
-						<li class="aside-position__item">
-							<div class="aside-position__detail">
-								<a href="#"><img src="img/pic7.jpg" alt=""></a>
-								<p>
-									<span><a href="#">Kevin Shults</a></span>
-									<a href="#">«Отличным поводом для судебного разбирательства послужила фраза хитрости в политике используют все, независимо от пола»</a>
-								</p>
-							</div>
-							<div class="aside-position__desc">
-								<p>Госдума «приняла антитабачный» закон</p><i></i>
-							</div>
-						</li>
-						<li class="aside-position__item">
-							<div class="aside-position__detail">
-								<a href="#"><img src="img/pic7.jpg" alt=""></a>
-								<p>
-									<span><a href="#">Михаил Казакевич</a></span>
-									<a href="#">Яровая: информация о незадекларированной квартире — инсинуация</a>
-								</p>
-							</div>
-							<div class="aside-position__desc">
-								<p>Защита Браудера и Магнитского оказалась не готова к слушаниям по делу, они отложены на 22 марта</p><i></i>
-							</div>
-						</li>
-					</ul>
+				<div class="block__content js-sl">
+					<div class="aside-position">
+						<ul class="aside-position__list">							
+							<li class="aside-position__item">
+								<div class="aside-position__detail">
+									<a href="#"><img src="img/pic7.jpg" width="64" height="65" alt=""></a>
+									<p>
+										<span><a href="#">Михаил Казакевич</a></span>
+										<a href="#">Яровая: информация о незадекларированной квартире — инсинуация</a>
+									</p>
+								</div>
+								<div class="aside-position__desc">
+									<p>Защита Браудера и Магнитского оказалась не готова к слушаниям по делу, они отложены на 22 марта</p><i></i>
+								</div>
+							</li>
+							<li class="aside-position__item">
+								<div class="aside-position__detail">
+									<a href="#"><img src="img/pic7.jpg" width="64" height="65" alt=""></a>
+									<p>
+										<span><a href="#">Kevin Shults</a></span>
+										<a href="#">«Отличным поводом для судебного разбирательства послужила фраза хитрости в политике используют все, независимо от пола»</a>
+									</p>
+								</div>
+								<div class="aside-position__desc">
+									<p>Госдума «приняла антитабачный» закон</p><i></i>
+								</div>
+							</li>
+						</ul>						
+					</div>
+					<div class="aside-position">
+						<ul class="aside-position__list">
+							<li class="aside-position__item">
+								<div class="aside-position__detail">
+									<a href="#"><img src="img/pic7.jpg" width="64" height="65" alt=""></a>
+									<p>
+										<span><a href="#">Kevin Shults</a></span>
+										<a href="#">«Отличным поводом для судебного разбирательства послужила фраза хитрости в политике используют все, независимо от пола»</a>
+									</p>
+								</div>
+								<div class="aside-position__desc">
+									<p>Госдума «приняла антитабачный» закон</p><i></i>
+								</div>
+							</li>
+							<li class="aside-position__item">
+								<div class="aside-position__detail">
+									<a href="#"><img src="img/pic7.jpg" width="64" height="65" alt=""></a>
+									<p>
+										<span><a href="#">Михаил Казакевич</a></span>
+										<a href="#">Яровая: информация о незадекларированной квартире — инсинуация</a>
+									</p>
+								</div>
+								<div class="aside-position__desc">
+									<p>Защита Браудера и Магнитского оказалась не готова к слушаниям по делу, они отложены на 22 марта</p><i></i>
+								</div>
+							</li>
+						</ul>						
+					</div>
+					<div class="aside-position">
+						<ul class="aside-position__list">
+							<li class="aside-position__item">
+								<div class="aside-position__detail">
+									<a href="#"><img src="img/pic7.jpg" width="64" height="65" alt=""></a>
+									<p>
+										<span><a href="#">Kevin Shults</a></span>
+										<a href="#">«Отличным поводом для судебного разбирательства послужила фраза хитрости в политике используют все, независимо от пола»</a>
+									</p>
+								</div>
+								<div class="aside-position__desc">
+									<p>Госдума «приняла антитабачный» закон</p><i></i>
+								</div>
+							</li>
+							<li class="aside-position__item">
+								<div class="aside-position__detail">
+									<a href="#"><img src="img/pic7.jpg" width="64" height="65" alt=""></a>
+									<p>
+										<span><a href="#">Михаил Казакевич</a></span>
+										<a href="#">Яровая: информация о незадекларированной квартире — инсинуация</a>
+									</p>
+								</div>
+								<div class="aside-position__desc">
+									<p>Защита Браудера и Магнитского оказалась не готова к слушаниям по делу, они отложены на 22 марта</p><i></i>
+								</div>
+							</li>
+						</ul>						
+					</div>
 				</div>
 			</div>
 			<!-- END .block -->
@@ -366,72 +451,68 @@
 <!-- BEGIN .main-experts -->
 <section class="main-experts">
 	<h2 class="h2">наши эксперты</h2>
-	<ul class="main-experts__list">
-		<li class="main-experts__prev">
-			<div class="main-experts__item">
-				<a href="#"><img src="img/pic10.jpg" alt=""></a>
-				<a href="#">Ольга Крыштановская</a>
-				<p><span>Советник Председателя Совета Федерации</span></p>			
-			</div>
-			<i></i>
-		</li>
-		<li>
-			<div class="main-experts__item">
-				<a href="#"><img src="img/pic10.jpg" alt=""></a>
-				<a href="#">Людмила Кешева</a>
-				<p><span>Президент Фонда эффективной политики, член Общественной палаты РФ</span></p>	
-			</div>
-			<i></i>
-		</li>
-		<li>
-			<div class="main-experts__item">
-				<a href="#"><img src="img/pic10.jpg" alt=""></a>
-				<a href="#">Людмила Кешева</a>
-				<p><span>Куратор по ЮФО Правозащитного движения "Пчелки" (г. Нальчик)</span></p>			
-			</div>
-			<i></i>
-		</li>
-		<li>
-			<div class="main-experts__item">
-				<a href="#"><img src="img/pic10.jpg" alt=""></a>
-				<a href="#">Ольга Крыштановская</a>
-				<p><span>Советник Председателя Совета Федерации</span></p>			
-			</div>
-			<i></i>
-		</li>
-		<li>
-			<div class="main-experts__item">
-				<a href="#"><img src="img/pic10.jpg" alt=""></a>
-				<a href="#">Людмила Кешева</a>
-				<p><span>Президент Фонда эффективной политики, член Общественной палаты РФ</span></p>	
-			</div>
-			<i></i>
-		</li>
-		<li>
-			<div class="main-experts__item">
-				<a href="#"><img src="img/pic10.jpg" alt=""></a>
-				<a href="#">Людмила Кешева</a>
-				<p><span>Куратор по ЮФО Правозащитного движения "Пчелки" (г. Нальчик)</span></p>
-			</div>
-			<i></i>
-		</li>
-		<li>
-			<div class="main-experts__item">
-				<a href="#"><img src="img/pic10.jpg" alt=""></a>
-				<a href="#">Людмила Кешева</a>
-				<p><span>Куратор по ЮФО Правозащитного движения "Пчелки" (г. Нальчик)</span></p>			
-			</div>
-			<i></i>
-		</li>
-		<li class="main-experts__next">
-			<div class="main-experts__item">
-				<a href="#"><img src="img/pic10.jpg" alt=""></a>
-				<a href="#">Ольга Крыштановская</a>
-				<p><span>Советник Председателя Совета Федерации</span></p>			
-			</div>
-			<i></i>
-		</li>
-	</ul>
+	<div class="main-experts__list">
+		<button class="main-experts__btn-prev"><i></i></button>
+		<button class="main-experts__btn-next"><i></i></button>
+		<ul>
+			<li>
+				<div class="main-experts__item">
+					<a href="#"><img src="img/pic10.jpg" alt=""></a>
+					<a href="#">Ольга Крыштановская</a>
+					<p><span>Советник Председателя Совета Федерации</span></p>			
+				</div>
+			</li>
+			<li>
+				<div class="main-experts__item">
+					<a href="#"><img src="img/pic10.jpg" alt=""></a>
+					<a href="#">Людмила Кешева</a>
+					<p><span>Президент Фонда эффективной политики, член Общественной палаты РФ</span></p>	
+				</div>
+			</li>
+			<li>
+				<div class="main-experts__item">
+					<a href="#"><img src="img/pic10.jpg" alt=""></a>
+					<a href="#">Людмила Кешева</a>
+					<p><span>Куратор по ЮФО Правозащитного движения "Пчелки" (г. Нальчик)</span></p>	
+				</div>
+			</li>
+			<li>
+				<div class="main-experts__item">
+					<a href="#"><img src="img/pic10.jpg" alt=""></a>
+					<a href="#">Ольга Крыштановская</a>
+					<p><span>Советник Председателя Совета Федерации</span></p>			
+				</div>
+			</li>
+			<li>
+				<div class="main-experts__item">
+					<a href="#"><img src="img/pic10.jpg" alt=""></a>
+					<a href="#">Людмила Кешева</a>
+					<p><span>Президент Фонда эффективной политики, член Общественной палаты РФ</span></p>	
+				</div>
+			</li>
+			<li>
+				<div class="main-experts__item">
+					<a href="#"><img src="img/pic10.jpg" alt=""></a>
+					<a href="#">Людмила Кешева</a>
+					<p><span>Куратор по ЮФО Правозащитного движения "Пчелки" (г. Нальчик)</span></p>
+				</div>
+			</li>
+			<li>
+				<div class="main-experts__item">
+					<a href="#"><img src="img/pic10.jpg" alt=""></a>
+					<a href="#">Людмила Кешева</a>
+					<p><span>Куратор по ЮФО Правозащитного движения "Пчелки" (г. Нальчик)</span></p>
+				</div>
+			</li>
+			<li>
+				<div class="main-experts__item">
+					<a href="#"><img src="img/pic10.jpg" alt=""></a>
+					<a href="#">Ольга Крыштановская</a>
+					<p><span>Советник Председателя Совета Федерации</span></p>			
+				</div>
+			</li>
+		</ul>
+	</div>
 </section>
 <!-- END .main-experts -->
 <!-- BEGIN .main-events -->
@@ -529,5 +610,48 @@
 	</div>
 </footer>
 <!-- END .footer -->
+<!-- BEGIN .popup -->
+<div class="popup-bg"></div>
+<form class="popup popup_enter" action="">
+	<div class="popup__title">Вход на сайты итар-тасс<button class="js-enter-close"></button></div>
+	<div class="popup__content">
+		<div class="enter">
+			<ul class="enter__fields">
+				<li>
+					<label for="enter-email">E-mail</label>
+					<input id="enter-email" type="text">
+				</li>
+				<li>
+					<label for="enter-login">Login</label>
+					<input id="enter-login" type="text">
+					<button></button>
+				</li>
+			</ul>
+			<div class="enter__info">
+				<div class="enter__links">
+					<a class="enter__lost-pass" href="#">Забыли пароль?</a>
+					<span>Нет логина?</span>
+					<a class="enter__reg" href="#">Зарегистрируйтесь</a>
+				</div>
+				<div class="enter__bottom">
+					<input class="enter__btn" type="submit" value="войти">
+					<label class="enter__remember"><input type="checkbox"><i></i>Запомнить меня</label>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="enter__social">
+		<span>Регистрация с помощью соцсетей</span>
+		<ul>
+			<li><a class="enter__fb" href="#"></a></li>
+			<li><a class="enter__vk" href="#"></a></li>
+			<li><a class="enter__tw" href="#"></a></li>
+			<li><a class="enter__ok" href="#"></a></li>
+			<li><a class="enter__ml" href="#"></a></li>
+		</ul>
+		</p>
+	</div>
+</form>
+<!-- END .popup -->
 </body>
 </html>
