@@ -9,7 +9,8 @@
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.cycle.all.js"></script>
+	<script src="js/jquery.tools.min.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>	
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -451,10 +452,10 @@
 <!-- BEGIN .main-experts -->
 <section class="main-experts">
 	<h2 class="h2">наши эксперты</h2>
-	<div class="main-experts__list">
-		<button class="main-experts__btn-prev"><i></i></button>
-		<button class="main-experts__btn-next"><i></i></button>
-		<ul>
+	<div class="main-experts__items js-sl-scr">
+		<button class="main-experts__btn-prev js-sl-scr-prev"><i></i></button>
+		<button class="main-experts__btn-next js-sl-scr-next"><i></i></button>
+		<ul class="main-experts__list js-sl-scr-items">
 			<li>
 				<div class="main-experts__item">
 					<a href="#"><img src="img/pic10.jpg" alt=""></a>
