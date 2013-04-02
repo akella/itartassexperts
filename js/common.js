@@ -50,32 +50,30 @@ $('.js-sl-count .js-sl-next').click(function() {
     $(this).prev().children('span').html(count);
   };
 });
+jQuery.fn.scrollableAddClones = function() {
+  var scrollable;
+  if (!(scrollable = $(this).data('scrollable')) || !scrollable.getConf().circular)
+    return;
+  var nodes = scrollable.getItems();
+  var length = nodes.length;
+  var clonedClass = scrollable.getConf().clonedClass;
+  var wrap = scrollable.getItemWrap(); 
+  for (var i = 1; i <= 6; i++) {
+    nodes.eq(i % length).clone().addClass(clonedClass).appendTo(wrap);
+  }
+}
 if ($('.js-sl-scr').length > 0) {
   $('.js-sl-scr').scrollable({
+    circular: true,
+    size: 1,
     prev: '.js-sl-scr-prev',
     next: '.js-sl-scr-next',
     items: '.js-sl-scr-items'
   });
 };
 if ($('.js-sl-scr').length > 0) {
-  // Get the Scrollable control
-  var scrollable_list_1 = $('.js-sl-scr').data('scrollable');
-  // Set to the number of visible items
-  var number_list = 6;
-  // Handle the Scrollable control's onBeforeSeek event
-  scrollable_list_1.onBeforeSeek(function(event, index) {
-    // Check to see if we're at the end
-    if (this.getIndex() >= this.getSize() - number_list) { 
-      // Check to see if we're trying to move forward
-      if (index > this.getIndex()) {
-        // Cancel navigation
-        return false;
-      }
-    }
-  });
+  $('.js-sl-scr').scrollableAddClones();
 };
-
-
 
 //enter
 $('.js-enter-open').click(function() {
@@ -86,5 +84,13 @@ $('.js-enter-close, .popup-bg').click(function() {
   $('.popup_enter, .popup-bg').fadeOut();
   return false;
 });
+
+//comments open block
+$('.js-comm').click(function() {  
+  var html_form = $('.js-add-comm');
+  var html = html_form.html();
+  //html_form.remove();
+  $(this).parent().parent().parent().append(html_form);
+})
 
 });
