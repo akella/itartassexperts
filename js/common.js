@@ -50,6 +50,7 @@ $('.js-sl-count .js-sl-next').click(function() {
     $(this).prev().children('span').html(count);
   };
 });
+//experts slider
 jQuery.fn.scrollableAddClones = function() {
   var scrollable;
   if (!(scrollable = $(this).data('scrollable')) || !scrollable.getConf().circular)
@@ -74,6 +75,56 @@ if ($('.js-sl-scr').length > 0) {
 if ($('.js-sl-scr').length > 0) {
   $('.js-sl-scr').scrollableAddClones();
 };
+//agenda slider
+if ($('.js-sl-ag').length > 0) {
+  $('.js-sl-ag').scrollable({
+    prev: '.js-sl-ag-prev',
+    next: '.js-sl-ag-next',
+    items: '.js-sl-ag-items'
+  });
+};
+if ($('.js-sl-ag').length>0) {
+  var scrollable_list = $('.js-sl-ag').data('scrollable');
+  var number_list = 3;
+  scrollable_list.onSeek(function(event, index) {
+    if (this.getIndex() >= this.getSize() - number_list) {    
+      $('.js-sl-ag-next').addClass('disabled');
+    }
+  });
+  scrollable_list.onBeforeSeek(function(event, index) {
+    if (this.getIndex() >= this.getSize() - number_list) { 
+      if (index > this.getIndex()) {
+        return false;
+      }
+    }
+  });
+};
+//top opinions slider
+if ($('.js-sl-to').length > 0) {
+  $('.js-sl-to').scrollable({
+    prev: '.js-sl-to-prev',
+    next: '.js-sl-to-next',
+    items: '.js-sl-to-items'
+  });
+};
+if ($('.js-sl-to').length>0) {
+  var scrollable_list_1 = $('.js-sl-to').data('scrollable');
+  var number_list_1 = 4;
+  scrollable_list_1.onSeek(function(event, index) {
+    if (this.getIndex() >= this.getSize() - number_list_1) {    
+      $('.js-sl-to-next').addClass('disabled');
+    }
+  });
+  scrollable_list_1.onBeforeSeek(function(event, index) {
+    if (this.getIndex() >= this.getSize() - number_list_1) { 
+      if (index > this.getIndex()) {
+        return false;
+      }
+    }
+  });
+};
+  
+
 
 //enter
 $('.js-enter-open').click(function() {

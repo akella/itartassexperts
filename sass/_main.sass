@@ -190,19 +190,26 @@
 		color: #fff
 //agenda
 .agenda
+	position: relative
+	height: 302px
 	margin-bottom: 56px
-	padding: 18px 10px 23px 10px
+	padding: 18px 20px 23px 20px
 	background: #ececec
 	border-radius: 0 0 3px 3px
+.agenda__slider
+	position: relative
+	width: 820px
+	height: 360px
+	overflow: hidden
 .agenda__list
-	font-size: 0
+	position: absolute
+	width: 2000em
 .agenda__item
 	position: relative
-	display: inline-block
+	float: left
 	width: 260px
 	height: 302px
-	padding: 0 10px
-	vertical-align: top
+	margin-right: 20px
 	img
 		display: block
 		margin-bottom: 15px 
@@ -221,7 +228,7 @@
 .agenda__meta
 	position: absolute
 	bottom: -55px
-	left: 10px
+	left: 0
 	width: 260px
 	height: 32px
 	border-radius: 0 0 3px 3px	
@@ -289,14 +296,18 @@
 			width: 140px
 			font-size: 12px 
 			text-transform: uppercase
-.top-opinions__list
+.top-opinions__slider
+	position: relative
+	width: 820px
+	height: 300px
 	overflow: hidden
+.top-opinions__list
+	position: absolute
+	width: 2000em
 .top-opinions__item
 	float: left
 	width: 193px
-	margin-left: 16px
-	&:first-child
-		margin: 0
+	margin-right: 16px
 .top-opinions__pic
 	img
 		display: block

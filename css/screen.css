@@ -272,18 +272,20 @@ table { border-spacing: 0; border-collapse: collapse; }
 .main-author__all { padding: 7px 0 9px 0; text-align: right; }
 .main-author__all a { font-size: 10px; color: white; }
 
-.agenda { margin-bottom: 56px; padding: 18px 10px 23px 10px; background: #ececec; border-radius: 0 0 3px 3px; }
+.agenda { position: relative; height: 302px; margin-bottom: 56px; padding: 18px 20px 23px 20px; background: #ececec; border-radius: 0 0 3px 3px; }
 
-.agenda__list { font-size: 0; }
+.agenda__slider { position: relative; width: 820px; height: 360px; overflow: hidden; }
 
-.agenda__item { position: relative; display: inline-block; width: 260px; height: 302px; padding: 0 10px; vertical-align: top; }
+.agenda__list { position: absolute; width: 2000em; }
+
+.agenda__item { position: relative; float: left; width: 260px; height: 302px; margin-right: 20px; }
 .agenda__item img { display: block; margin-bottom: 15px; }
 .agenda__item a { font-size: 17px; font-weight: bold; line-height: 1.1; color: #0d46a4; }
 .agenda__item li { font-size: 10px; }
 .agenda__item li a { font-size: 10px; color: white; }
 .agenda__item li strong { font-size: 11px; }
 
-.agenda__meta { position: absolute; bottom: -55px; left: 10px; width: 260px; height: 32px; border-radius: 0 0 3px 3px; background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2E1MGUwZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzZmMGQxMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a50e0f), color-stop(100%, #6f0d12)); background: -webkit-linear-gradient(#a50e0f, #6f0d12); background: -moz-linear-gradient(#a50e0f, #6f0d12); background: -o-linear-gradient(#a50e0f, #6f0d12); background: linear-gradient(#a50e0f, #6f0d12); box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -15px inset; }
+.agenda__meta { position: absolute; bottom: -55px; left: 0; width: 260px; height: 32px; border-radius: 0 0 3px 3px; background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2E1MGUwZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzZmMGQxMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a50e0f), color-stop(100%, #6f0d12)); background: -webkit-linear-gradient(#a50e0f, #6f0d12); background: -moz-linear-gradient(#a50e0f, #6f0d12); background: -o-linear-gradient(#a50e0f, #6f0d12); background: linear-gradient(#a50e0f, #6f0d12); box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -15px inset; }
 .agenda__meta ul { margin: 8px 0 5px; font-size: 0; text-align: center; }
 .agenda__meta li { display: inline-block; height: 19px; padding: 0 10px; border-left: 1px solid #70070c; box-shadow: #8f0b0d -1px 0 0; vertical-align: top; line-height: 19px; }
 .agenda__meta li:first-child { box-shadow: none; border: none; color: #caa3a3; }
@@ -302,10 +304,11 @@ table { border-spacing: 0; border-collapse: collapse; }
 .top-opinions_aside .nav-btns button:first-child { margin: 0; }
 .top-opinions_aside .nav-btns strong { width: 140px; font-size: 12px; text-transform: uppercase; }
 
-.top-opinions__list { overflow: hidden; }
+.top-opinions__slider { position: relative; width: 820px; height: 300px; overflow: hidden; }
 
-.top-opinions__item { float: left; width: 193px; margin-left: 16px; }
-.top-opinions__item:first-child { margin: 0; }
+.top-opinions__list { position: absolute; width: 2000em; }
+
+.top-opinions__item { float: left; width: 193px; margin-right: 16px; }
 
 .top-opinions__pic img { display: block; border-radius: 2px 2px 0 0; }
 
